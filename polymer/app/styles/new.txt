@@ -1,0 +1,6 @@
+I’m going to leave the features of the dashboard to the end. Next up - the wrapper. 
+It’s all built using Google Polymer. What is Google Polymer? I’ll let them tell you all about it. 
+The short version is that it’s basically a way to template the web - build, skin, and share core components. It’s responsive by design, integrates with Google’s Material Design principles, and drastically simplifies the process of web design. 
+All I had to do was pick the parts I needed - header, toolbar, cards and start nesting them together. To make them float, it’s just a <paper-material elevation=“5″></paper-material> tag, and voila! floating pages.
+Even better, because you get all the core HTML, styling and animation components out of the box, you can inspect the underlying code and demos, and just copy/paste their defaults into your project. It’s like a massive debugging tool at your fingertips - for someone who is constantly confused by CSS rules, it’s wonderful to see things in action and just apply those same principles to my own work.
+Beyond ease of use - here’s why I chose Polymer. It assumes that certain aspects of the web should be a default: things like native responsiveness, data-binding, integration with Googles’s core services, e-commerce integration, offline, and push messaging should be deployable out of the gate. 

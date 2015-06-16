@@ -1,0 +1,133 @@
+body {
+    font-family: 'Crimson Text', serif;
+    background-color: #969696;
+}
+#toolbar1 {
+    background-image: url("tableau1.png");
+    background-color: rgb(251, 129, 20);
+    right: 0px;
+    left: 0px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 65px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: white;
+}
+paper-tabs {
+    width: 100%;
+    color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 2px;
+    left: 0px;
+    top: 65px;
+    position: absolute;
+    background-color: #fb8114;
+    font-weight: 700;
+    font-size: medium;
+}
+#polymer_button {
+    height: 32px;
+    width: 32px;
+}
+#div {
+    font-weight: 700;
+    font-size: xx-large;
+    padding: 15px;
+    height: 52px;
+}
+section {
+    position: relative;
+    top: 115px;
+    width: 100%;
+}
+#tabmap {
+    position: relative;
+    height: 80vh;
+}
+#metricbars {
+    position: relative;
+    height: 38vh;
+}
+#themechart {
+    position: relative;
+    height: 80vh;
+}
+#themes {
+    position: relative;
+    height: 80vh;
+}
+#profile {
+    position: relative;
+    height: 80vh;
+}
+#profilechart {
+    position: relative;
+    height: 80vh;
+}
+paper-material {
+    box-sizing: border-box;
+    margin: 10px;
+}
+#unclassified {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #fb8114;
+    color: white;
+    font-weight: 700;
+    font-size: xx-large;
+    text-align: center;   
+}
+#metriccontainer {
+    display: flex;
+    justify-content: space-between;
+    height: 40vh;
+    margin: 15px;
+}
+#mention {
+    position: absolute;
+    height: 100%;
+    width: 100%
+}
+#country {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+#source {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+#mentiontoggle {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    color: white;
+}
+#countrytoggle {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    color: white;
+}
+#sourcetoggle {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    color: white;
+}
+paper-slider {
+    background-color: #969696;
+    width: 100%;
+    height: 60px;
+}
+#toggle {
+    width: 33%;
+}
