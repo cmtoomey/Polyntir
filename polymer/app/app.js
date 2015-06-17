@@ -9,52 +9,52 @@ $(document).ready(function() {
             onFirstInteractive: function() {
                 // The viz is now ready and can be safely used.
                 workbook = viz.getWorkbook();
+                var i = 2;
 
+                var timer = $.timer(function() {
+                    if (i < 278) {
+                        workbook.changeParameterValueAsync("Time", i);
+                        i = i + 1;
+                    } else {
+                        i = 1;
+                    }
+                });
+                timer.set({
+                    time: 2000,
+                    autostart: true
+                });
+
+                $("#tabmap").mouseenter(function() {
+                    timer.pause();
+                })
+
+                $("#tabmap").mouseleave(function() {
+                    timer.play();
+                })
+                
+                $("#explorer").click(function() {
+                    workbook.activateSheetAsync("UnclassifiedExplorer");
+                    timer.play();
+                })
+
+                $("#metrics").click(function() {
+                    timer.pause();
+                    workbook.activateSheetAsync("ClassifiedMetric");
+                })
+
+                $("#themes").click(function() {
+                    timer.pause();
+                    workbook.activateSheetAsync("ClassifiedThemes");
+                })
+
+                $("#profile").click(function() {
+                    timer.pause();
+                    workbook.activateSheetAsync("ClassifiedProfile");
+                })
             }
         };
         var viz = new tableau.Viz(placeholderDiv, url, options);
     };
     explorer();
-    var i = 2;
-
-    var interval = setInterval(function() {
-        if (i < 278) {
-            workbook.changeParameterValueAsync("Time", i);
-            i = i + 1;
-        } else {
-            i = 1;
-        };
-    }, 2000)
-
-    $("#explorer").click(function() {
-        workbook.activateSheetAsync("UnclassifiedExplorer");
-        var i = 2;
-
-        var interval = setInterval(function() {
-            if (i < 278) {
-                workbook.changeParameterValueAsync("Time", i);
-                i = i + 1;
-            } else {
-                i = 1;
-            };
-        }, 2000)
-
-    })
-
-    $("#metrics").click(function() {
-        clearInterval(interval);
-        workbook.activateSheetAsync("ClassifiedMetric");
-
-    })
-
-    $("#themes").click(function() {
-        clearInterval(interval);
-        workbook.activateSheetAsync("ClassifiedThemes");
-    })
-
-    $("#profile").click(function() {
-        clearInterval(interval);
-        workbook.activateSheetAsync("ClassifiedProfile");
-    })
 
 });
